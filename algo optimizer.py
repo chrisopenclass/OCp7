@@ -1,7 +1,11 @@
 import csv
 from collections import namedtuple
+import time
 
-with open('dataset2_Python+P7(1).csv', mode='r') as fichiercsv:
+
+start = time.time()
+
+with open('liste_action.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
     dictionnaire = {rows[0]: [int(float(rows[1])*100), float(rows[2])] for rows in reader if float(rows[1])*100 > 0}
@@ -68,3 +72,5 @@ def fonction(tableau):
 
 
 action_a_acheter = fonction(tableau)
+
+print(f" le temps d'exécussion est de : {time.time() - start} seconde")

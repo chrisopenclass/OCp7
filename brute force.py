@@ -1,5 +1,9 @@
 from itertools import combinations, chain
 import csv
+import time
+
+
+start = time.time()
 
 
 with open('liste_action.csv', mode='r') as fichiercsv:
@@ -55,3 +59,6 @@ def extraction_meilleur(meilleur_combinaison):
 meilleur_combinaison = combinaison_resultat()
 
 extraction_meilleur(meilleur_combinaison)
+
+
+print(f" le temps d'exécussion est de : {time.time() - start} seconde")
