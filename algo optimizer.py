@@ -5,7 +5,7 @@ import time
 
 start = time.time()
 
-with open('liste_action.csv', mode='r') as fichiercsv:
+with open('dataset1_Python+p7.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
     dictionnaire = {rows[0]: [int(float(rows[1])*100), float(rows[2])] for rows in reader if float(rows[1])*100 > 0}
@@ -30,6 +30,7 @@ liste = []
 for action in sorted_dictionaire:
     liste.append(Action(action, dictionnaire[action][0], dictionnaire[action][2]))
 
+
 tableau = []
 
 for t in range(len(liste)+1):
@@ -43,7 +44,7 @@ for t in range(1, len(liste)+1):
         tableau[t][index] = tableau[t - 1][index]
         action_consideree = liste[t-1]
         valeur_total = tableau[t-1][index - action_consideree.prix] + action_consideree.valeur
-        if index >= action_consideree.prix and tableau[t][index] < valeur_total and action_consideree.prix > 0:
+        if index >= action_consideree.prix and tableau[t][index] < valeur_total:
             tableau[t][index] = valeur_total
 
 
