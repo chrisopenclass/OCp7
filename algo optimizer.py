@@ -8,37 +8,25 @@ start = time.time()
 with open('dataset1_Python+p7.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
-    dictionnaire = {rows[0]: [int(float(rows[1])*100), float(rows[2])] for rows in reader if float(rows[1])*100 > 0}
+    dictionnaire = {rows[0]: [int(float(rows[1])*100), float(rows[2]),
+                    float(rows[1]) * float(rows[2])/100]
+                    for rows in reader if float(rows[1])*100 > 0}
 
 
 portefeuille = 500 * 100
 
 
-def calcule_benef(prix, benef_a_2_an):
-    return prix * benef_a_2_an / 100
-
-
-for key, value in dictionnaire.items():
-    value.append(calcule_benef(value[0], value[1]))
-
-sorted_dictionaire = sorted(dictionnaire, key=lambda ele: (dictionnaire[ele][2]))
-
 Action = namedtuple("Action", "nom,prix,valeur")
 
 liste = []
 
-for action in sorted_dictionaire:
+for action in dictionnaire:
     liste.append(Action(action, dictionnaire[action][0], dictionnaire[action][2]))
 
 
-tableau = []
+tableau = [[0 for x in range(portefeuille + 1)]for x in range(len(liste) + 1)]
 
-for t in range(len(liste)+1):
-    temp = []
-    for index in range(portefeuille):
-        temp.append(0)
-    tableau.append(temp)
-
+print(f" le temps d'exécussion est de : {time.time() - start} seconde")
 for t in range(1, len(liste)+1):
     for index in range(portefeuille):
         tableau[t][index] = tableau[t - 1][index]
@@ -49,7 +37,7 @@ for t in range(1, len(liste)+1):
 
 
 def fonction(tableau):
-    i = len(sorted_dictionaire)
+    i = len(dictionnaire)
     p = portefeuille - 1
     liste_a_acheter = []
     action = []
@@ -66,7 +54,7 @@ def fonction(tableau):
     for element in liste_a_acheter:
         action.append(element.nom)
         cout_total += element.prix / 100
-        benef += element.valeur / 100
+        benef += element.valeur
     print(f'les action à acheter sont :{action}')
     print(f'pour un cout total de :{cout_total}')
     print(f'le benefice total sera de :{benef} roupies ')
