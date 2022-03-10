@@ -19,11 +19,11 @@ def is_identical(list_a, list_b):
             print(f"{i}")
 
 
-list_a = ['Share-IXCI', 'Share-FWBE', 'Share-ZOFA', 'Share-PLLK', 'Share-MEQV',
-                        'Share-LXZU', 'Share-PSMF', 'Share-PATS', 'Share-SCWM', 'Share-VCXT', 'Share-NDKR',
-                        'Share-ALIY', 'Share-JWGF', 'Share-FCHD', 'Share-JGTW', 'Share-VCAX', 'Share-LFXB',
-                        'Share-DWSK', 'Share-XQII', 'Share-OAVO', 'Share-ROOM', 'Share-YCGH']
-
+list_a = ['Share-ECAQ', 'Share-IXCI', 'Share-FWBE', 'Share-ZOFA', 'Share-PLLK',
+                        'Share-MEQV', 'Share-LXZU', 'Share-YFVZ', 'Share-ANFX', 'Share-PATS', 'Share-SCWM',
+                        'Share-ZLMC', 'Share-NDKR', 'Share-ALIY', 'Share-JWGF', 'Share-FAKH', 'Share-FAPS',
+                        'Share-ZKSN', 'Share-IJFT', 'Share-LFXB', 'Share-DWSK', 'Share-BMHD', 'Share-XQII',
+                        'Share-GEBJ']
 
 list_b = ['Share-ECAQ', 'Share-IXCI', 'Share-FWBE', 'Share-ZOFA', 'Share-PLLK',
                         'Share-LXZU', 'Share-YFVZ', 'Share-ANFX', 'Share-PATS', 'Share-SCWM', 'Share-NDKR',
