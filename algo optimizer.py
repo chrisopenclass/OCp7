@@ -5,7 +5,7 @@ import math
 
 start = time.time()
 
-with open('dataset1_python+p7.csv', mode='r') as fichiercsv:
+with open('dataset2_python+p7.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
     dictionnaire = {rows[0]: [math.ceil(float(rows[1])), float(rows[2]),
