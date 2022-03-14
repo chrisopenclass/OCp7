@@ -5,14 +5,13 @@ import math
 
 start = time.time()
 
-with open('dataset2_python+p7(1).csv', mode='r') as fichiercsv:
+with open('dataset1_python+p7.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
-    dictionnaire = {rows[0]: [math.floor(float(rows[1])), float(rows[2]),
+    dictionnaire = {rows[0]: [math.ceil(float(rows[1])), float(rows[2]),
                     float(rows[1]) * float(rows[2])/100]
-                    for rows in reader if math.floor(float(rows[1])) > 0}
+                    for rows in reader if math.ceil(float(rows[1])) > 0}
 
-print(len(dictionnaire))
 portefeuille = 500
 
 
