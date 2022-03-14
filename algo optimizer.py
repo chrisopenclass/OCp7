@@ -36,7 +36,7 @@ for t in range(1, len(liste)+1):
             tableau[t][solde_actuel] = valeur_total
 
 
-def fonction(tableau):
+def extraction(tableau):
     i = len(dictionnaire)
     p = portefeuille - 1
     liste_a_acheter = []
@@ -60,6 +60,6 @@ def fonction(tableau):
     print(f'le benefice total sera de :{benef} roupies ')
 
 
-action_a_acheter = fonction(tableau)
+action_a_acheter = extraction(tableau)
 
 print(f" le temps d'exécussion est de : {time.time() - start} seconde")
