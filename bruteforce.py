@@ -6,7 +6,7 @@ import time
 start = time.time()
 
 
-with open('liste_action.csv', mode='r') as fichiercsv:
+with open('dataset0_Python+p7.csv', mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
     dictionnaire = {rows[0]: [float(rows[1]), float(rows[2])] for rows in reader if float(rows[1])*100 > 0}

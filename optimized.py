@@ -2,10 +2,12 @@ import csv
 from collections import namedtuple
 import time
 import math
+import sys
+
 
 start = time.time()
 
-with open('dataset2_python+p7.csv', mode='r') as fichiercsv:
+with open(sys.argv[1], mode='r') as fichiercsv:
     reader = csv.reader(fichiercsv)
     next(reader)
     dictionnaire = {rows[0]: [math.ceil(float(rows[1])), float(rows[2]),
