@@ -1,3 +1,4 @@
+
 def is_identical(list_a, list_b):
     if len(list_a) != len(list_b):
         print(f"la liste A contient {len(list_a)} element alors que la liste B contient {len(list_b)} elements\n")
