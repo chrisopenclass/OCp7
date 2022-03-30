@@ -22,6 +22,6 @@ il est conseillé sous le prompt bash python (ici windows terminal sous Windows 
 
         ``` python optimized.py dataset1_Python+P7.csv
         
-        ou
+ou
         
         ``` python optimized.py dataset2_Python+P7.csv
