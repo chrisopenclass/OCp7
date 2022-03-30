@@ -19,6 +19,7 @@ il est conseillé sous le prompt bash python (ici windows terminal sous Windows 
 ## Lancement du script optimiser
 
 1. d'executer le script  en lui donnant en argument le nom du fichier CSV à traiter.
+
         ``` python optimized.py dataset1_Python+P7.csv
         
         ou
